@@ -13,37 +13,42 @@ function Home2() {
               LET ME <span className="purple"> INTRODUCE </span> MYSELF
             </h1>
             <p className="home-about-body">
-              I’m a Software Engineer who loves transforming ideas into
-              reliable, scalable products. Over time, I’ve explored several
-              technologies and found my passion in building high-performance
-              systems and intuitive user experiences.
+              I’m a researcher and builder <span className="purple">obsessed with Applied AI</span>.
+              <br />
+              While everyone else is busy "prompting," I’m diving into the core of ML and Deep Learning to understand the actual mechanics.
+              <br />
+              <br />I build
+              <i>
+                <b className="purple"> Agentic AI </b>
+              </i>
+              because I’m tired of tools that can’t think for themselves.
               <br />
               <br />
-              I’m proficient in
+              I am fluent in classics like
+              <i>
+                <b className="purple"> Python, PyTorch, and LangChain. </b>
+              </i>
+              <br />
+              <br />
+              My field of Interest's are building new &nbsp;
+              <i>
+                <b className="purple">Deep Learning Models, Agentic Swarms </b> and
+                also in areas related to{" "}
+                <b className="purple">High-Energy Physics Research.</b>
+              </i>
+              <br />
+              <br />
+              Whenever possible, I also apply my passion for developing products
+              with <b className="purple">Modern Javascript Library</b> and
               <i>
                 <b className="purple">
                   {" "}
-                  JavaScript, C++, Rust, Node.js, and Java{" "}
+                  Modern Frameworks
                 </b>
               </i>
-              — and I enjoy working across both backend and frontend stacks.
-              <br />
-              <br />
-              My key areas of interest include developing
+              &nbsp; like
               <i>
-                <b className="purple">
-                  {" "}
-                  Web Applications, Blockchain Solutions,{" "}
-                </b>
-              </i>
-              and exploring new ways to bridge on-chain and off-chain systems.
-              <br />
-              <br />
-              Whenever possible, I love building projects with
-              <b className="purple"> Node.js </b> and modern frameworks like{" "}
-              <i>
-                <b className="purple">React.js</b> and{" "}
-                <b className="purple">Next.js</b>.
+                <b className="purple"> React.js and Next.js</b>
               </i>
             </p>
           </Col>
