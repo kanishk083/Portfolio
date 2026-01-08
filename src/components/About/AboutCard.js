@@ -32,9 +32,9 @@ function AboutCard() {
           </ul>
 
           <p style={{ color: "rgb(155 126 172)" }}>
-            "Strive to build things that make a difference!"{" "}
+            "Everything negative - pressure, challenges - is all an opportunity for me to rise."{" "}
           </p>
-          <footer className="blockquote-footer">Soumyajit</footer>
+          <footer className="blockquote-footer">Kobe Bryant</footer>
         </blockquote>
       </Card.Body>
     </Card>
