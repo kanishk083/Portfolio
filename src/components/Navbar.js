@@ -3,6 +3,7 @@ import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
 import Container from "react-bootstrap/Container";
 import logo from "../Assets/logo.png";
+import pdf from "../Assets/resume (4).pdf";
 import Button from "react-bootstrap/Button";
 
 import { CgGitFork } from "react-icons/cg";
@@ -12,6 +13,7 @@ import {
   AiOutlineHome,
   AiOutlineFundProjectionScreen,
   AiOutlineUser,
+  AiOutlineDownload,
 } from "react-icons/ai";
 
 import { CgFileDocument } from "react-icons/cg";
@@ -80,6 +82,17 @@ function NavBar() {
                 />{" "}
                 Projects
               </Nav.Link>
+            </Nav.Item>
+
+            <Nav.Item className="fork-btn">
+              <Button
+                href={pdf}
+                target="_blank"
+                className="fork-btn-inner"
+              >
+                <AiOutlineDownload style={{ fontSize: "1.2em" }} />{" "}
+                <AiFillStar style={{ fontSize: "1.1em" }} />
+              </Button>
             </Nav.Item>
 
 

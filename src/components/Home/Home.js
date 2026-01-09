@@ -1,6 +1,8 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import homeLogo from "../../Assets/home-main.svg";
+import pdf from "../../Assets/resume (4).pdf";
+import { QRCodeCanvas } from "qrcode.react";
 import Particle from "../Particle";
 import Home2 from "./Home2";
 import Type from "./Type";
@@ -35,6 +37,10 @@ function Home() {
 
               <div style={{ padding: 50, textAlign: "left" }}>
                 <Type />
+              </div>
+              <div style={{ paddingLeft: 50, paddingTop: 20 }}>
+                <QRCodeCanvas value={window.location.origin + pdf} size={150} fgColor="#cd5ff8" bgColor="#ffffff" />
+                <p style={{ paddingTop: 10, color: "white", fontSize: "0.8em" }}>Scan to Download Resume</p>
               </div>
             </Col>
 

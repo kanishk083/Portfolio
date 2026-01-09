@@ -49,7 +49,7 @@ function Projects() {
               imgPath={track}
               isBlog={false}
               title="TrackML"
-              description="A comprehensive project focused on tracking machine learning experiments and model performance. It provides insights into model behavior and helps optimization."
+              description="This project leverages Graph Neural Networks (GNNs) to reconstruct particle trajectories for the TrackML Challenge. Using the memory-efficient TrackTransformer architecture, the model achieved 60% recall on 15GB VRAM. Current development focuses on resolving numerical instability and improving precision to overcome the extreme class imbalance in detector data"
               ghLink="https://github.com/kanishk083/TrackML-.git"
             />
           </Col>
