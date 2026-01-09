@@ -90,8 +90,7 @@ function NavBar() {
                 target="_blank"
                 className="fork-btn-inner"
               >
-                <AiOutlineDownload style={{ fontSize: "1.2em" }} />{" "}
-                <AiFillStar style={{ fontSize: "1.1em" }} />
+                <AiOutlineDownload style={{ marginBottom: "2px" }} /> Download Resume
               </Button>
             </Nav.Item>
 
