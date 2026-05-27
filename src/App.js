@@ -4,6 +4,7 @@ import Navbar from "./components/Navbar";
 import Home from "./components/Home/Home";
 import About from "./components/About/About";
 import Projects from "./components/Projects/Projects";
+import Achievements from "./components/Achievements/Achievements";
 import Footer from "./components/Footer";
 
 import "./style.css";
@@ -27,6 +28,9 @@ function App() {
       <div className="App" id={load ? "no-scroll" : "scroll"}>
         <Navbar />
         <Home />
+        <div id="achievements">
+          <Achievements />
+        </div>
         <div id="about">
           <About />
         </div>

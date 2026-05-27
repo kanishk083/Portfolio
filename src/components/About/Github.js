@@ -8,14 +8,17 @@ function Github() {
       style={{
         justifyContent: "center",
         paddingBottom: "10px",
+        paddingTop: "80px",
+        marginTop: "80px",
+        borderTop: "1px solid rgba(200, 137, 230, 0.2)",
         color: "white",
       }}
     >
       <h1 className="project-heading pb-4" style={{ paddingBottom: "20px" }}>
-        Days I <strong className="purple">Code</strong>
+        AI Systems <strong className="purple">Built</strong>
       </h1>
-      <div style={{ fontSize: "20px", color: "white", paddingBottom: "20px" }}>
-        433 contributions in the last year
+      <div style={{ fontSize: "20px", color: "white", paddingBottom: "5px" }}>
+        AI Systems Built · Agentic Workflows Developed · AI Projects Shipped · Automation Pipelines Created
       </div>
       <GitHubCalendar
         username="kanishk083"

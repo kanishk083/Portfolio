@@ -11,30 +11,30 @@ function AboutCard() {
             Hi Everyone, I am <span className="purple">Kanishk </span>
             from <span className="purple"> India.</span>
             <br />
-            I am a researcher and builder obsessed with <span className="purple">Applied AI.</span>
+            I'm an <span className="purple">AI Engineer</span> building intelligent systems, AI agents, and automation workflows that solve real problems.
             <br />
-            I don't just import models; I interrogate them to understand the actual mechanics.
+            My work spans the full AI stack — from LLM orchestration and agentic architectures to cloud infrastructure and deployment pipelines.
             <br />
             <br />
-            Apart from coding, here are the "Seeker Specs" I live by:
+            Beyond engineering, here's what drives me:
           </p>
 
           <ul>
             <li className="about-activity">
-              <ImPointRight /> The Deep Dive: Understanding the math behind the layers.
+              <ImPointRight /> <strong>Systems Thinking</strong> — Architecting AI systems that are reliable, observable, and production-ready.
             </li>
             <li className="about-activity">
-              <ImPointRight /> The Hunger: Building agents that act, not just toys.
+              <ImPointRight /> <strong>Agentic Design</strong> — Building autonomous agents that reason, plan, and execute multi-step workflows.
             </li>
             <li className="about-activity">
-              <ImPointRight /> The Sarcasm: Efficiency is key.
+              <ImPointRight /> <strong>Infrastructure First</strong> — Optimizing inference, serving models locally, and owning the deployment pipeline.
             </li>
           </ul>
 
           <p style={{ color: "rgb(155 126 172)" }}>
-            "Everything negative - pressure, challenges - is all an opportunity for me to rise."{" "}
+            "The best way to predict the future is to build it."{" "}
           </p>
-          <footer className="blockquote-footer">Kobe Bryant</footer>
+          <footer className="blockquote-footer">Alan Kay</footer>
         </blockquote>
       </Card.Body>
     </Card>

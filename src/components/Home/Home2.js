@@ -10,46 +10,22 @@ function Home2() {
         <Row>
           <Col md={8} className="home-about-description">
             <h1 style={{ fontSize: "2.6em" }}>
-              LET ME <span className="purple"> INTRODUCE </span> MYSELF
+              ABOUT <span className="purple"> ME </span>
             </h1>
             <p className="home-about-body">
-              I’m a researcher and builder <span className="purple">obsessed with Applied AI</span>.
-              <br />
-              While everyone else is busy "prompting," I’m diving into the core of ML and Deep Learning to understand the actual mechanics.
-              <br />
-              <br />I build
-              <i>
-                <b className="purple"> Agentic AI </b>
-              </i>
-              because I’m tired of tools that can’t think for themselves.
+              I'm an AI Engineer focused on building intelligent systems, AI agents, and scalable automation workflows. My work combines <span className="purple">LLM engineering, backend systems, AI infrastructure, and full-stack development</span> to create practical AI-powered applications.
               <br />
               <br />
-              I am fluent in classics like
-              <i>
-                <b className="purple"> Python, PyTorch, and LangChain. </b>
-              </i>
+              I actively work with <i><b className="purple">agentic workflows, retrieval systems, AI coding tools, local model infrastructure, and automation pipelines</b></i> to build efficient and scalable AI systems.
               <br />
               <br />
-              My field of Interest's are building new &nbsp;
-              <i>
-                <b className="purple">Deep Learning Models, Agentic Swarms </b> and
-                also in areas related to{" "}
-                <b className="purple">High-Energy Physics Research.</b>
-              </i>
+              My expertise spans <i><b className="purple">multi-agent architectures, LLMOps, RAG pipelines, prompt engineering, function calling, and AI orchestration</b></i> — designing systems that don't just respond, but reason and act.
               <br />
               <br />
-              Whenever possible, I also apply my passion for developing products
-              with <b className="purple">Modern Javascript Library</b> and
-              <i>
-                <b className="purple">
-                  {" "}
-                  Modern Frameworks
-                </b>
-              </i>
-              &nbsp; like
-              <i>
-                <b className="purple"> React.js and Next.js</b>
-              </i>
+              From deploying <i><b className="purple">LLM inference pipelines</b></i> to architecting <i><b className="purple">autonomous agent networks</b></i>, I build the infrastructure that powers modern AI applications.
+              <br />
+              <br />
+              I also build full-stack AI products with <i><b className="purple">React, Next.js, FastAPI, TypeScript, and Tailwind CSS</b></i> — bridging the gap between AI capabilities and real-world user interfaces.
             </p>
           </Col>
           <Col md={4} className="myAvtar">

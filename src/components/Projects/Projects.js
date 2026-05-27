@@ -1,17 +1,73 @@
-import React from "react";
+import React, { useState } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import ProjectCard from "./ProjectCards";
 import Particle from "../Particle";
-import leaf from "../../Assets/Projects/leaf.png";
-import emotion from "../../Assets/Projects/emotion.png";
-import editor from "../../Assets/Projects/codeEditor.png";
-import chatify from "../../Assets/Projects/chatify.png";
-import chanakya from "../../Assets/Projects/chanakya.png";
-import drone from "../../Assets/Projects/drone.png";
-import track from "../../Assets/Projects/track.png";
-import competitor from "../../Assets/Projects/competitor.png";
+
+const filterTabs = ["All", "Full-Stack AI", "Computer Vision", "Machine Learning", "AI Agent"];
+
+const projectData = [
+  {
+    id: 1,
+    category: "Full-Stack AI",
+    statusBadge: "🤝 Collab",
+    title: "Lumiqe — AI Color Analysis & Personal Styling Platform",
+    oneLiner: "CV-powered platform that analyzes skin tone and builds a personalized color palette, wardrobe guide, and outfit recommendations.",
+    description: "Production-grade AI styling platform with a 9-step computer vision pipeline (BiSeNet, MediaPipe, Delta-E CIE2000) for lighting-invariant skin tone classification across 12 color seasons. Features real-time in-store clothing scanner with Buy/Pass verdict, AI Stylist chat powered by Llama 3.3 70B, Stripe billing, wardrobe management, price alerts, and referral system — wrapped in a secure full-stack architecture with server-side JWT proxying.",
+    impactStat: "9-step CV pipeline · 12 color seasons · < 2s analysis",
+    techPills: ["Next.js", "FastAPI", "PyTorch", "OpenCV", "Groq LLM"],
+    ghLink: "https://github.com/DineshDhanoki/lumiqe",
+    collabNote: "Built in collaboration with Dinesh Dhanoki",
+    featured: true,
+  },
+  {
+    id: 2,
+    category: "Computer Vision",
+    statusBadge: "✅ Shipped",
+    title: "Real-Time Drone Detection System",
+    oneLiner: "Live drone detection using deep learning and real-time image processing.",
+    description: "Real-time computer vision system for drone detection using YOLO-based object detection and AI-powered image processing pipelines optimized for live inference at 30fps.",
+    impactStat: "Real-time detection · 30fps live inference",
+    techPills: ["Python", "OpenCV", "YOLO", "Deep Learning", "Real-Time AI"],
+    ghLink: "https://github.com/kanishk083/DRONE-DETECTION",
+    featured: false,
+  },
+  {
+    id: 3,
+    category: "Machine Learning",
+    statusBadge: "✅ Shipped",
+    title: "ML Practical Tracking Platform",
+    oneLiner: "End-to-end ML pipeline for intelligent tracking and predictive analytics.",
+    description: "Built machine learning pipelines for intelligent tracking, predictive modeling, and data-driven decision systems with structured model evaluation and analytics workflows.",
+    impactStat: "End-to-end ML pipeline · Predictive analytics",
+    techPills: ["Python", "Machine Learning", "Analytics", "Predictive Modeling", "Data Pipelines"],
+    ghLink: "https://github.com/kanishk083/TrackML-",
+    featured: false,
+  },
+  {
+    id: 4,
+    category: "AI Agent",
+    statusBadge: "✅ Shipped",
+    title: "AI Competitor Intelligence Agent",
+    oneLiner: "Autonomous agent that researches competitors and generates strategic intelligence reports.",
+    description: "Autonomous AI agent that analyzes competitor businesses, extracts strategic insights, and produces structured intelligence reports using LLM workflows and multi-step automation pipelines.",
+    impactStat: "Autonomous research · Multi-step LLM workflows",
+    techPills: ["Python", "LangChain", "OpenAI API", "AI Agents", "Automation"],
+    ghLink: "https://github.com/kanishk083/competitor_analyzer_agent",
+    featured: false,
+  },
+];
 
 function Projects() {
+  const [activeFilter, setActiveFilter] = useState("All");
+
+  const filtered = projectData.filter((p) => {
+    if (activeFilter === "All") return true;
+    return p.category === activeFilter;
+  });
+
+  const featuredProject = projectData.find((p) => p.featured);
+  const gridProjects = filtered.filter((p) => !p.featured);
+
   return (
     <Container fluid className="project-section">
       <Particle />
@@ -20,59 +76,54 @@ function Projects() {
           My Recent <strong className="purple">Works </strong>
         </h1>
         <p style={{ color: "white" }}>
-          Here are a few projects I've worked on recently.
+          AI Systems, agents, and automation pipelines I've built.
         </p>
+
+        <div className="filter-tabs">
+          {filterTabs.map((tab) => (
+            <button
+              key={tab}
+              className={`filter-tab ${activeFilter === tab ? "filter-tab-active" : ""}`}
+              onClick={() => setActiveFilter(tab)}
+            >
+              {tab}
+            </button>
+          ))}
+        </div>
+
+        {featuredProject && (activeFilter === "All" || activeFilter === featuredProject.category) && (
+          <div className="featured-project-wrapper">
+            <ProjectCard
+              key={featuredProject.id}
+              featured
+              category={featuredProject.category}
+              statusBadge={featuredProject.statusBadge}
+              title={featuredProject.title}
+              oneLiner={featuredProject.oneLiner}
+              description={featuredProject.description}
+              impactStat={featuredProject.impactStat}
+              techPills={featuredProject.techPills}
+              ghLink={featuredProject.ghLink}
+              collabNote={featuredProject.collabNote}
+            />
+          </div>
+        )}
+
         <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>
-          <Col md={4} className="project-card">
-            <ProjectCard
-              imgPath={drone}
-              isBlog={false}
-              title="Drone Detection"
-              description="A system designed to detect and track drones in restricted airspace, ensuring security and safety. It utilizes advanced algorithms to identify drone signatures and trajectory."
-              ghLink="https://github.com/kanishk083/DRONE-DETECTION.git"
-            />
-          </Col>
-
-          <Col md={4} className="project-card">
-            <ProjectCard
-              imgPath={chanakya}
-              isBlog={false}
-              title="Chanakya Systems"
-              description="An orchestration of autonomous agents designed to handle the complex, messy operations of MSMEs. It uses a Swarm intelligence approach—no central bottleneck, just agents collaborating to solve real-world business friction."
-              ghLink="https://chanakya.systems/"
-              demoLink="https://chanakya.systems/"
-            />
-          </Col>
-
-          <Col md={4} className="project-card">
-            <ProjectCard
-              imgPath={track}
-              isBlog={false}
-              title="TrackML"
-              description="This project leverages Graph Neural Networks (GNNs) to reconstruct particle trajectories for the TrackML Challenge. Using the memory-efficient TrackTransformer architecture, the model achieved 60% recall on 15GB VRAM. Current development focuses on resolving numerical instability and improving precision to overcome the extreme class imbalance in detector data"
-              ghLink="https://github.com/kanishk083/TrackML-.git"
-            />
-          </Col>
-
-          <Col md={4} className="project-card">
-            <ProjectCard
-              imgPath={chatify}
-              isBlog={false}
-              title="The Deep Research Agent"
-              description="A recursive, autonomous researcher that digs through the noise to find the core truth. It doesn't just summarize; it interrogates web data and synthesizes reports with a depth that would make a PhD student sweat."
-              ghLink="https://github.com/kanishk083/DEEP-RESEARCH-AGENT.git"
-            />
-          </Col>
-
-          <Col md={4} className="project-card">
-            <ProjectCard
-              imgPath={competitor}
-              isBlog={false}
-              title="The Competitor Analyzer"
-              description="An autonomous agent that scrapes, maps, and analyzes competitors in real-time. It identifies market gaps and strategy shifts by connecting the dots across the web—turning messy competitive landscapes into a clean, actionable map."
-              ghLink="https://github.com/kanishk083/competitor_analyzer_agent.git"
-            />
-          </Col>
+          {gridProjects.map((project) => (
+            <Col md={4} className="project-card" key={project.id}>
+              <ProjectCard
+                category={project.category}
+                statusBadge={project.statusBadge}
+                title={project.title}
+                oneLiner={project.oneLiner}
+                description={project.description}
+                impactStat={project.impactStat}
+                techPills={project.techPills}
+                ghLink={project.ghLink}
+              />
+            </Col>
+          ))}
         </Row>
       </Container>
     </Container>
