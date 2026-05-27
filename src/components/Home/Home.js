@@ -1,7 +1,7 @@
 import React from "react";
 import { Container, Row, Col, Button } from "react-bootstrap";
 import profilePhoto from "../../Assets/KANISHK.jpeg";
-import pdf from "../../Assets/resume (4).pdf";
+import pdf from "../../Assets/Kanishk_Wagh_Resume_Final.pdf";
 import { QRCodeCanvas } from "qrcode.react";
 import Particle from "../Particle";
 import Home2 from "./Home2";

@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
 import Container from "react-bootstrap/Container";
-import pdf from "../Assets/resume (4).pdf";
+import pdf from "../Assets/Kanishk_Wagh_Resume_Final.pdf";
 import Button from "react-bootstrap/Button";
 
 import {
